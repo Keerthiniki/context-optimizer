@@ -1,0 +1,311 @@
+{
+  "id": "conv_06_product_roadmap",
+  "domain": "Product Roadmap",
+  "message_count": 60,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Alright everyone, let's get started on the Q3 planning session. I want to make sure we leave today with clear priorities and owners for each workstream."
+    },
+    {
+      "role": "assistant",
+      "content": "Sounds good. I pulled together the engineering capacity doc last night \u2014 we're looking at roughly 14 engineer-weeks available after accounting for on-call rotations and the two folks on PTO in July."
+    },
+    {
+      "role": "user",
+      "content": "Perfect. Before we get into capacity, can we do a quick gut-check on where we landed with the user research synthesis? I know the design team had some strong findings."
+    },
+    {
+      "role": "assistant",
+      "content": "Yeah, we finished the synthesis on Friday. The big theme that kept coming up was search \u2014 users are really struggling to find things inside the product, especially on the data explorer page. We heard it from at least 12 of the 18 interviewees we ran last month."
+    },
+    {
+      "role": "user",
+      "content": "That tracks with what I've been hearing in support tickets too. One user literally wrote 'I give up trying to find my old reports' in a cancellation survey. That one stuck with me."
+    },
+    {
+      "role": "assistant",
+      "content": "Ouch. Yeah that's brutal."
+    },
+    {
+      "role": "user",
+      "content": "Do we have quantitative data to back up the search pain point, or is it mostly qualitative right now?"
+    },
+    {
+      "role": "assistant",
+      "content": "Mostly qualitative at the moment. I can pull session recordings and search query logs to get a clearer picture of where people are dropping off. Give me a few days to put something together \u2014 I want to make sure the numbers are solid before we anchor decisions to them."
+    },
+    {
+      "role": "user",
+      "content": "That would be really helpful. Can we set a hard deadline on that? The board presentation on the roadmap is June 15th and we'll need supporting data before that."
+    },
+    {
+      "role": "assistant",
+      "content": "Noted on June 15th for the board presentation. I can commit to having a usage metrics report ready by next Tuesday \u2014 that gives us a full week to incorporate the findings before the board deck needs to go out."
+    },
+    {
+      "role": "user",
+      "content": "Great, let's lock that in. So data analyst delivers usage metrics report by next Tuesday. I'll add that to the action items doc."
+    },
+    {
+      "role": "assistant",
+      "content": "Works for me. I'll also flag anything surprising in the data so we can discuss it before it ends up in the board slides."
+    },
+    {
+      "role": "user",
+      "content": "Speaking of the board presentation \u2014 have we decided what the narrative arc is going to be? Are we leading with growth, with product vision, or with competitive positioning?"
+    },
+    {
+      "role": "assistant",
+      "content": "I think we lead with the customer problem and then show how our roadmap directly addresses it. The board has been asking for more customer-centric framing ever since the Q1 review."
+    },
+    {
+      "role": "user",
+      "content": "Agreed. It also makes the AI search feature a natural centerpiece if we frame it that way."
+    },
+    {
+      "role": "assistant",
+      "content": "Which brings us to the big question \u2014 are we officially making AI search the top priority for Q3? I want to make sure engineering is fully aligned before we tell the board that."
+    },
+    {
+      "role": "user",
+      "content": "From an engineering standpoint, it's feasible within the capacity we have. The main risk is the LLM integration layer \u2014 we haven't built anything like that before and there's real unknowns there."
+    },
+    {
+      "role": "assistant",
+      "content": "What's your rough estimate on the unknowns? Like a two-week spike or more of a 'we don't know what we don't know' situation?"
+    },
+    {
+      "role": "user",
+      "content": "Honestly it's somewhere in between. I'd say we budget three weeks for a proper technical discovery and prototype before we commit to a full build timeline."
+    },
+    {
+      "role": "assistant",
+      "content": "That's fair. And if the spike reveals it's more complex than expected, we'd have time to descope before we're already mid-sprint."
+    },
+    {
+      "role": "user",
+      "content": "Exactly. I'd rather know early than be surprised in August."
+    },
+    {
+      "role": "assistant",
+      "content": "Ok so let's make it official \u2014 AI search is our top priority for Q3. Everything else gets scheduled around it and we protect that team from interruptions."
+    },
+    {
+      "role": "user",
+      "content": "Agreed. Decision made: AI search feature is the top priority for Q3. I'll document that."
+    },
+    {
+      "role": "assistant",
+      "content": "Good. I'll start drafting the design specs this week. We already have some early wireframes from the research phase that we can build on."
+    },
+    {
+      "role": "user",
+      "content": "Can you share those wireframes in Figma before end of week? I want engineering to start thinking about the technical approach in parallel."
+    },
+    {
+      "role": "assistant",
+      "content": "Yep, I'll have them in the shared project folder by Thursday."
+    },
+    {
+      "role": "user",
+      "content": "By the way, did anyone see that Notion dropped a pretty slick AI search feature last week? I've been playing around with it."
+    },
+    {
+      "role": "assistant",
+      "content": "Yeah I saw that. Their implementation is solid for document search but it doesn't really handle structured data queries, which is where our users live. I think we have a real differentiator opportunity there."
+    },
+    {
+      "role": "user",
+      "content": "That's a good point. Our users are doing much more complex queries across datasets, not just searching for text in docs."
+    },
+    {
+      "role": "assistant",
+      "content": "Exactly. We should lean into that in the design \u2014 natural language queries that can reference specific columns, date ranges, filters. That's the thing Notion can't do and our users desperately want."
+    },
+    {
+      "role": "user",
+      "content": "ok now I'm excited about this feature again"
+    },
+    {
+      "role": "assistant",
+      "content": "Ha, same. It's one of those things that sounds simple but could genuinely change how people use the product every day."
+    },
+    {
+      "role": "user",
+      "content": "Alright let's shift gears for a minute. We've been putting off the legacy dashboard conversation for two quarters now. Can we actually make a call on it today?"
+    },
+    {
+      "role": "assistant",
+      "content": "Please. My team has been maintaining that thing in parallel with the new dashboard and it's costing us real bandwidth. We have two engineers who basically can't work on anything else because of legacy bugs."
+    },
+    {
+      "role": "user",
+      "content": "What does the usage data look like for legacy dashboard? Are there still active users on it?"
+    },
+    {
+      "role": "assistant",
+      "content": "Last time I looked it was down to about 8% of active accounts still using it regularly, and most of those are enterprise customers on older contracts. But I'll pull the exact numbers in that report I'm prepping for Tuesday."
+    },
+    {
+      "role": "user",
+      "content": "If it's 8% we need a migration plan, not a sunset debate. The question is timeline."
+    },
+    {
+      "role": "assistant",
+      "content": "Engineering's vote is end of Q4. That gives us time to migrate those enterprise accounts properly without rushing it, and it frees up the two engineers for the AI search work in Q3."
+    },
+    {
+      "role": "user",
+      "content": "From a design perspective, we should also audit what features are being used in legacy that haven't been fully replicated in the new dashboard. I'd hate to sunset it and then get complaints."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a good call. I can do that audit as part of the wireframe work this week \u2014 shouldn't take more than a day or two."
+    },
+    {
+      "role": "user",
+      "content": "Ok I think the alignment is there. Let's decide: we sunset the legacy dashboard by end of Q4, with a full migration plan and feature parity audit completed by end of Q3."
+    },
+    {
+      "role": "assistant",
+      "content": "Works for me. Decision locked in. End of Q4 for the legacy dashboard sunset."
+    },
+    {
+      "role": "user",
+      "content": "Good. That's been hanging over us for way too long."
+    },
+    {
+      "role": "assistant",
+      "content": "Tell me about it."
+    },
+    {
+      "role": "user",
+      "content": "Hey quick side note \u2014 are we still doing team lunch on Friday? I think someone mentioned Thai food but I'm not sure if that's confirmed."
+    },
+    {
+      "role": "assistant",
+      "content": "I think it's still on. Priya said she'd make a reservation at that Thai place on Morrison Street. Hasn't sent a calendar invite yet though."
+    },
+    {
+      "role": "user",
+      "content": "Someone should nudge her. Last time we ended up eating at our desks because no one followed up."
+    },
+    {
+      "role": "assistant",
+      "content": "Ha, fair. I'll ping her after this meeting."
+    },
+    {
+      "role": "user",
+      "content": "Ok back to the roadmap. What are we doing with the notification center? That was on the Q2 backlog and I don't think it got finished."
+    },
+    {
+      "role": "assistant",
+      "content": "We got about 70% through it. The backend is done but the UI work stalled when we pulled resources to fix that data export bug in May. We estimate two more weeks to finish it."
+    },
+    {
+      "role": "user",
+      "content": "Is that something we can wrap up in early Q3 without disrupting AI search ramp-up?"
+    },
+    {
+      "role": "assistant",
+      "content": "If we timebox it strictly to two weeks and pull in one of the engineers who isn't on the AI search spike, yeah. It's just frontend work at this point so it won't interfere."
+    },
+    {
+      "role": "user",
+      "content": "sounds good, let's plan for that"
+    },
+    {
+      "role": "assistant",
+      "content": "I'll slot it into the sprint plan for the first two weeks of July."
+    },
+    {
+      "role": "user",
+      "content": "One more thing I want to flag before we wrap \u2014 mobile. We keep deprioritizing it and I got an earful from a customer last week. They said and I'm quoting here, 'your mobile app feels like an afterthought from 2019.'"
+    },
+    {
+      "role": "assistant",
+      "content": "Ouch. That's harsh but honestly not inaccurate."
+    },
+    {
+      "role": "user",
+      "content": "I know we can't do a full mobile overhaul in Q3 with AI search taking priority. But is there something we can do that's visible enough to show customers we're taking it seriously?"
+    },
+    {
+      "role": "assistant",
+      "content": "We could do a focused mobile performance pass \u2014 fix the biggest pain points like load time and the broken filter UI on iOS. That wouldn't require design to take on a full workstream and could realistically be scoped to four or five engineer-days."
+    },
+    {
+      "role": "user",
+      "content": "I like that framing. 'Mobile performance pass' sounds concrete and deliverable."
+    },
+    {
+      "role": "assistant",
+      "content": "We could even write a short customer-facing blog post about it to make sure the work is visible. Sometimes the perception gap is just about communication."
+    },
+    {
+      "role": "user",
+      "content": "Yeah agreed. Let's add that to the Q3 plan as a supporting initiative alongside AI search and the notification center wrap-up."
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. I'll add it to the roadmap doc. Should I mark it as a committed item or a stretch goal?"
+    },
+    {
+      "role": "user",
+      "content": "Committed. It's not that much work and the customer signal is too strong to treat it as optional."
+    },
+    {
+      "role": "assistant",
+      "content": "Committed it is."
+    },
+    {
+      "role": "user",
+      "content": "How are we looking on the board presentation structure? We need to start building the actual deck soon if the presentation is June 15th."
+    },
+    {
+      "role": "assistant",
+      "content": "I'd suggest we divide it up \u2014 PM owns the narrative and strategic framing, design puts together the product vision visuals, engineering provides the delivery confidence section, and data analyst brings the metrics story. We could do a first draft review next Wednesday."
+    },
+    {
+      "role": "user",
+      "content": "That works. Wednesday review means everyone needs their sections done by Tuesday EOD, which also lines up with when the usage metrics report will be ready."
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect timing then. The metrics will feed directly into the data story slide."
+    },
+    {
+      "role": "user",
+      "content": "Exactly. Let's make sure the deck tells a coherent story \u2014 Q2 learnings, Q3 commitments, and a preview of where we're headed in Q4 with the legacy dashboard sunset."
+    },
+    {
+      "role": "assistant",
+      "content": "That's a clean arc. Q2 to Q3 to Q4 with a thread of customer-centricity running through it. The board will appreciate the continuity."
+    },
+    {
+      "role": "user",
+      "content": "ok I think we're in really good shape. Let me just read back the key decisions and action items before we close out."
+    },
+    {
+      "role": "assistant",
+      "content": "Go for it."
+    },
+    {
+      "role": "user",
+      "content": "AI search is top priority for Q3. Legacy dashboard sunsets end of Q4 with migration plan done by end of Q3. Data analyst delivers usage metrics report next Tuesday. Board presentation is June 15th and we review the deck draft next Wednesday. Design shares wireframes by Thursday. And someone pings Priya about Friday lunch."
+    },
+    {
+      "role": "assistant",
+      "content": "That's everything. Clean summary. I'll make sure the Figma link is in the shared channel by Thursday morning so engineering has the full day to review it."
+    },
+    {
+      "role": "user",
+      "content": "Perfect. Good meeting everyone. Let's make Q3 the quarter we actually ship something that makes users say wow."
+    },
+    {
+      "role": "assistant",
+      "content": "That's the goal. See everyone Thursday for the wireframe review and Friday for Thai food."
+    }
+  ]
+}

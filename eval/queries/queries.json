@@ -1,0 +1,368 @@
+[
+  {
+    "conversation_id": "conv_01_project_planning",
+    "queries": [
+      {
+        "query": "What launch date was decided for the app?",
+        "type": "factual",
+        "expected_landmark_indices": [
+          0
+        ],
+        "description": "A good answer should clearly state that the launch date was set for March 15th, as this was a concrete decision made during the planning sync."
+      },
+      {
+        "query": "What were the main topics and blockers discussed during the project planning sync?",
+        "type": "analytical",
+        "expected_landmark_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "description": "A good answer should summarize the key discussion areas: establishing a launch date, unresolved API endpoint scoping on the backend, open design questions blocking progress, the need for a finalized feature list, and the resulting deadlines and commitments made by each team member."
+      },
+      {
+        "query": "What steps were agreed upon to move the project forward after the sync?",
+        "type": "procedural",
+        "expected_landmark_indices": [
+          1,
+          2,
+          3
+        ],
+        "description": "A good answer should outline the sequence of deliverables and milestones: the feature doc to be delivered by 5pm that day, the designer delivering final mockups by next Monday, the backend developer finishing the API by February 28th, QA testing running from March 1-10, and the app launching on March 15th."
+      },
+      {
+        "query": "What commitment did the backend developer make regarding the API, and how does it fit into the overall project timeline?",
+        "type": "landmark",
+        "expected_landmark_indices": [
+          1,
+          3,
+          0
+        ],
+        "description": "A good answer should specifically identify the backend developer's commitment to finish the API by February 28th, and explain how this feeds into the QA testing window of March 1-10, which in turn supports the final launch date of March 15th."
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_02_technical_arch",
+    "queries": [
+      {
+        "query": "Which database was chosen for transaction storage in the payment processing system?",
+        "type": "factual",
+        "expected_landmark_indices": [
+          1
+        ],
+        "description": "A good answer should identify PostgreSQL as the chosen database and note that it was selected over DynamoDB"
+      },
+      {
+        "query": "What were the main competing concerns and trade-offs discussed when deciding on the architecture for the payment processing system?",
+        "type": "analytical",
+        "expected_landmark_indices": [
+          0,
+          1
+        ],
+        "description": "A good answer should cover the tension between monolith vs microservices, the constraints of a small team with an aggressive timeline, high correctness and consistency requirements, regulatory compliance, and the team's projected headcount growth from 8 to 15 engineers by Q3"
+      },
+      {
+        "query": "What are the steps the team planned to take before the RFC is finalized and published on Friday?",
+        "type": "procedural",
+        "expected_landmark_indices": [
+          2,
+          3
+        ],
+        "description": "A good answer should outline: contacting Priya about the caching benchmark, pinging the security team for async review by end of Thursday to incorporate feedback, and the lead architect writing the RFC by Friday"
+      },
+      {
+        "query": "Who committed to writing the RFC and by what deadline?",
+        "type": "landmark",
+        "expected_landmark_indices": [
+          2
+        ],
+        "description": "A good answer should identify that the lead architect made the commitment to write the RFC by Friday, and ideally note the plan to incorporate security team feedback before that deadline"
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_03_sales_call",
+    "queries": [
+      {
+        "query": "Who were the participants on the call from Centrix?",
+        "type": "factual",
+        "expected_landmark_indices": [],
+        "description": "A good answer should identify Tom (head of procurement and vendor evaluation) and Dana (head of IT infrastructure) as the Centrix participants, and note that Marcus and Sarah (solutions engineering) were on the vendor side."
+      },
+      {
+        "query": "What were the main topics covered during the sales call and how did the conversation progress from introduction to close?",
+        "type": "analytical",
+        "expected_landmark_indices": [],
+        "description": "A good answer should summarize the agenda structure (current environment review, technical overview by Sarah, Q&A and next steps), note the substantive nature of the discussion, and capture the transition from discovery to agreement on next steps including the pilot program decision and proposal commitment."
+      },
+      {
+        "query": "What steps need to happen after this call in order for the deal to move forward?",
+        "type": "procedural",
+        "expected_landmark_indices": [],
+        "description": "A good answer should outline the post-call process: Marcus (AE) sends a pricing proposal by end of week, Sarah (solutions engineer) sets up a sandbox environment, and procurement needs to obtain internal approval by end of Q2 to meet the deadline."
+      },
+      {
+        "query": "What commitment did the AE make regarding the pricing proposal, and what deadline is driving the procurement timeline?",
+        "type": "landmark",
+        "expected_landmark_indices": [],
+        "description": "A good answer should reference the AE's commitment to send the pricing proposal by end of week and the procurement team's requirement to secure approval by end of Q2, connecting these two time-sensitive commitments as critical path items for the pilot program to proceed."
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_04_customer_support",
+    "queries": [
+      {
+        "query": "What was the agent's name who handled this customer support call?",
+        "type": "factual",
+        "expected_landmark_indices": [],
+        "description": "A good answer should identify the agent as Marcus, as he introduced himself early in the conversation"
+      },
+      {
+        "query": "What were the two main issues the customer contacted support about, and how were they each addressed?",
+        "type": "analytical",
+        "expected_landmark_indices": [],
+        "description": "A good answer should cover both the account lockout issue (escalated to engineering with a 24-hour resolution window and a follow-up password reset) and the double billing issue (resolved with a full refund), while noting the customer had prior frustrating experiences with disconnected hold calls"
+      },
+      {
+        "query": "What steps did the agent outline for resolving the account access problem?",
+        "type": "procedural",
+        "expected_landmark_indices": [],
+        "description": "A good answer should describe the process: escalating the account lock issue to the engineering team, expecting a fix within 24 hours, and then the customer resetting their password once the fix is applied"
+      },
+      {
+        "query": "What commitment did the agent make regarding the customer's account lock issue, and what was the expected timeline for resolution?",
+        "type": "landmark",
+        "expected_landmark_indices": [],
+        "description": "A good answer should reference the agent's commitment to escalate the account lock to the engineering team and the stated deadline of resolution within 24 hours, as well as the customer's follow-up action of resetting their password after the fix"
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_05_team_retro",
+    "queries": [
+      {
+        "query": "What policy did the team decide to implement for hotfixes during the retrospective?",
+        "type": "factual",
+        "expected_landmark_indices": [
+          0
+        ],
+        "description": "A good answer should clearly state that the team decided to add mandatory code review for all hotfixes, indicating this was a deliberate decision made during the retro."
+      },
+      {
+        "query": "What were the main outcomes and themes discussed during the team retrospective, including what went well and what needed improvement?",
+        "type": "analytical",
+        "expected_landmark_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "description": "A good answer should summarize the retrospective discussion, contrasting positive outcomes (e.g., incident resolution, post-incident notes) with areas needing improvement, and listing the decisions, commitments, and action items that emerged."
+      },
+      {
+        "query": "What steps or process improvements were agreed upon for updating the on-call runbook, and who is responsible?",
+        "type": "procedural",
+        "expected_landmark_indices": [
+          2
+        ],
+        "description": "A good answer should identify the team lead as responsible for updating the on-call runbook, and note that improvements such as post-incident notes within 24 hours and the incident commander role definition were to be included in the runbook update."
+      },
+      {
+        "query": "What commitment did the SRE lead make during the retrospective, and by when is it expected to be completed?",
+        "type": "landmark",
+        "expected_landmark_indices": [
+          1
+        ],
+        "description": "A good answer should specifically reference the SRE lead's commitment to implement automated rollback, with a deadline of the next sprint, as a concrete deliverable agreed upon during the retrospective."
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_06_product_roadmap",
+    "queries": [
+      {
+        "query": "How many engineer-weeks are available for Q3 after accounting for on-call rotations and PTO?",
+        "type": "factual",
+        "expected_landmark_indices": [],
+        "description": "A good answer should specify 14 engineer-weeks and mention the factors reducing capacity: on-call rotations and two team members on PTO in July."
+      },
+      {
+        "query": "What were the main themes from the user research synthesis and how did they influence the Q3 roadmap priorities?",
+        "type": "analytical",
+        "expected_landmark_indices": [
+          0
+        ],
+        "description": "A good answer should connect the user research finding about search struggles (12 of 18 interviewees) and corroborating support ticket evidence to the decision to make AI search the top Q3 priority."
+      },
+      {
+        "query": "What are the steps and deadlines the team needs to complete before the board presentation on June 15th?",
+        "type": "procedural",
+        "expected_landmark_indices": [
+          3
+        ],
+        "description": "A good answer should outline the sequence: design shares wireframes by Thursday, engineering reviews wireframes, deck draft review the following Wednesday, and the board presentation itself on June 15th."
+      },
+      {
+        "query": "When is the data analyst expected to deliver the usage metrics report, and what was the context for that commitment?",
+        "type": "landmark",
+        "expected_landmark_indices": [
+          2
+        ],
+        "description": "A good answer should state the delivery date of next Tuesday and place the commitment in the context of the Q3 planning session where key owners and deliverables were being assigned."
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_07_debugging_session",
+    "queries": [
+      {
+        "query": "Which service was experiencing the OOM errors and what was the memory leak pattern observed?",
+        "type": "factual",
+        "expected_landmark_indices": [],
+        "description": "A good answer should identify the auth service and describe the steady memory climb over approximately 6 hours followed by pod crash, consistent with a slow leak pattern"
+      },
+      {
+        "query": "How did the debugging session progress from initial problem identification to root cause, and what tools were considered along the way?",
+        "type": "analytical",
+        "expected_landmark_indices": [],
+        "description": "A good answer should summarize the progression from OOM alert to suspecting the auth service, the discussion of profiling tools like tracemalloc and Guppy3, and the eventual confirmation that the connection pool was not closing connections properly"
+      },
+      {
+        "query": "What were the planned next steps after the root cause was identified, including tooling, deployment, and monitoring changes?",
+        "type": "procedural",
+        "expected_landmark_indices": [],
+        "description": "A good answer should cover: instrumenting with tracemalloc, deploying the fix to staging via ArgoCD that night, writing an incident report, adding memory profiling to the CI pipeline, and ensuring the fix is complete before Friday's traffic spike"
+      },
+      {
+        "query": "What commitment did the senior dev make regarding the fix, and what was the deadline driving that commitment?",
+        "type": "landmark",
+        "expected_landmark_indices": [],
+        "description": "A good answer should reference the senior dev's commitment to deploy the fix to staging that night (around 9 PM pending Jenkins build), and connect it to the urgency of fixing the issue before Friday's anticipated traffic spike"
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_08_hiring_discussion",
+    "queries": [
+      {
+        "query": "Which candidate was selected to receive the job offer?",
+        "type": "factual",
+        "expected_landmark_indices": [
+          0
+        ],
+        "description": "A good answer should clearly identify Candidate B, Sarah, as the selected candidate and confirm that the team agreed to extend her an offer."
+      },
+      {
+        "query": "How did the three candidates compare in terms of their interview performance and what were the key strengths and weaknesses that led to the final hiring decision?",
+        "type": "analytical",
+        "expected_landmark_indices": [
+          0
+        ],
+        "description": "A good answer should summarize Alex's strong resume but weak technical performance, Sarah's strong motivation and depth in modeling challenges, and Marcus's evaluation, explaining why Sarah stood out as the clear choice."
+      },
+      {
+        "query": "What steps need to be completed before the offer can go out, and who is responsible for each step?",
+        "type": "procedural",
+        "expected_landmark_indices": [
+          1,
+          2,
+          3
+        ],
+        "description": "A good answer should outline: the recruiter checking the salary band with HR, the hiring manager drafting the offer letter by tomorrow, and the offer being sent out by Thursday to beat the competing offer."
+      },
+      {
+        "query": "What is the deadline for sending out the offer to Sarah, and why is that deadline important?",
+        "type": "landmark",
+        "expected_landmark_indices": [
+          3
+        ],
+        "description": "A good answer should specify Thursday as the deadline and explain that the urgency is driven by the need to beat a competing offer that Sarah may have in hand."
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_09_budget_planning",
+    "queries": [
+      {
+        "query": "Which observability tool was chosen during the budget planning session?",
+        "type": "factual",
+        "expected_landmark_indices": [
+          1
+        ],
+        "description": "A good answer should clearly state that Datadog was selected over New Relic as the observability platform"
+      },
+      {
+        "query": "What were the main budget topics discussed and what were the key outcomes for each?",
+        "type": "analytical",
+        "expected_landmark_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "description": "A good answer should summarize the three main topics (cloud costs, tooling/observability, and board reporting), compare the decisions made in each area, and highlight the $45K AWS increase, Datadog selection, and the finance lead's commitment to prepare the board slide"
+      },
+      {
+        "query": "What steps were agreed upon to follow up after the budget planning session?",
+        "type": "procedural",
+        "expected_landmark_indices": [
+          2,
+          3
+        ],
+        "description": "A good answer should outline the follow-up process: the assistant sending a recap email within the hour, engineering providing a 6-month cloud cost projection, the finance lead preparing the board budget slide by Monday, and a follow-up sync scheduled once the board slide is drafted"
+      },
+      {
+        "query": "What was the approved monthly budget increase for AWS GPU instances and what context led to that decision?",
+        "type": "landmark",
+        "expected_landmark_indices": [
+          0
+        ],
+        "description": "A good answer should state the approved $45K monthly AWS budget increase for GPU instances and reference the context of being 22% over forecast in Q2, including the unexpected ML team GPU usage spike in May that went undetected until $40K over budget"
+      }
+    ]
+  },
+  {
+    "conversation_id": "conv_10_onboarding",
+    "queries": [
+      {
+        "query": "Which team will the new hire be joining?",
+        "type": "factual",
+        "expected_landmark_indices": [
+          0
+        ],
+        "description": "A good answer should specify that the new hire was assigned to the search team, not the recommendations team, and may mention the context around that decision."
+      },
+      {
+        "query": "What are the key expectations and commitments discussed during the onboarding conversation?",
+        "type": "analytical",
+        "expected_landmark_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "description": "A good answer should summarize all major outcomes: team assignment to search, manager commitment to pair-program on first PR, security training deadline by end of week 1, and the expectation of a meaningful PR by end of week 2."
+      },
+      {
+        "query": "What steps does the new hire need to take during their first two weeks?",
+        "type": "procedural",
+        "expected_landmark_indices": [
+          2,
+          3
+        ],
+        "description": "A good answer should outline the procedural steps discussed: completing security training by end of week 1, getting set up in Jira and Confluence, exploring the codebase, watching the two recorded internal talks about Elasticsearch migration, and submitting a first meaningful PR by end of week 2."
+      },
+      {
+        "query": "What did the manager commit to doing to support the new hire on their first pull request?",
+        "type": "landmark",
+        "expected_landmark_indices": [
+          1
+        ],
+        "description": "A good answer should clearly state that the manager committed to pair-programming with the new hire on their first PR, reflecting the specific support commitment made during onboarding."
+      }
+    ]
+  }
+]

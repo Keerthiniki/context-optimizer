@@ -1,0 +1,319 @@
+{
+  "id": "conv_10_onboarding",
+  "domain": "Onboarding",
+  "message_count": 60,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hey! I just got my laptop set up and badge activated. Ready to get started whenever you are."
+    },
+    {
+      "role": "assistant",
+      "content": "Welcome aboard! Really glad you're here. Let me just finish up this one message and I'll come grab you from the onboarding desk in like five minutes."
+    },
+    {
+      "role": "user",
+      "content": "No rush, take your time."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, I'm here! Let's head over to the team area first. I'll introduce you to everyone and then we'll grab a conference room to go through the bigger picture stuff."
+    },
+    {
+      "role": "user",
+      "content": "Sounds good. How big is the team right now?"
+    },
+    {
+      "role": "assistant",
+      "content": "We're at eight engineers right now, plus me. We've got two squads that are somewhat loosely defined \u2014 one focused on search infrastructure, one on recommendations and personalization. You'll meet everyone in a sec."
+    },
+    {
+      "role": "user",
+      "content": "Oh nice, I didn't realize there were two distinct squads. Are they totally separate or do people move around?"
+    },
+    {
+      "role": "assistant",
+      "content": "People do move around occasionally, but mostly folks stick to one area for at least a quarter so there's some continuity. We try to avoid too much context switching \u2014 it kills productivity."
+    },
+    {
+      "role": "user",
+      "content": "Yeah that makes sense."
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, so over here \u2014 this is Marcus, he's our senior on the search side. Marcus, this is our new engineer!"
+    },
+    {
+      "role": "user",
+      "content": "Hey Marcus, great to meet you!"
+    },
+    {
+      "role": "assistant",
+      "content": "Marcus is awesome, he'll probably be one of your closest collaborators. And around the corner here \u2014 this is Priya and Devon, they're on the recommendations squad. Priya's been here three years, Devon joined about six months ago so he's still relatively fresh too."
+    },
+    {
+      "role": "user",
+      "content": "Oh cool, Devon \u2014 good to know I'm not the only new person around."
+    },
+    {
+      "role": "assistant",
+      "content": "Ha, exactly. Devon can probably give you some good tips on what the onboarding experience is actually like from the ground level. He went through it not too long ago. Okay, let me show you the rest of the floor and then we'll grab that conference room."
+    },
+    {
+      "role": "user",
+      "content": "Sounds great. Is there a kitchen or something nearby? I didn't get a chance to grab coffee this morning."
+    },
+    {
+      "role": "assistant",
+      "content": "Yes! Kitchen's right through that door. We've got decent coffee \u2014 it's not fancy but it's free. There's also a pretty good espresso place called Ground & Grain about two blocks east if you need something stronger. Most of the team goes there at least once a day."
+    },
+    {
+      "role": "user",
+      "content": "Good to know. I'll definitely need to check that out."
+    },
+    {
+      "role": "assistant",
+      "content": "Also, for lunch \u2014 totally unsolicited advice \u2014 there's a Thai place called Lotus Bowl on Fifth that's incredible, and a solid sandwich spot called The Counter on Fourth. We usually do a team lunch on Fridays if you want to join. It rotates between those two mostly."
+    },
+    {
+      "role": "user",
+      "content": "I'm absolutely in for team lunch. Okay, coffee grabbed \u2014 ready for the conference room."
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect. Let's go to Maple room, it's the one with the glass walls on this side. I've got a few things pulled up already on the screen."
+    },
+    {
+      "role": "user",
+      "content": "Got it, I'm following you."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay so, big picture first. I want to talk about where you'll be plugging in. We had originally discussed during interviews that you might land on the recommendations squad, but after looking at current priorities and headcount, I actually want to put you on the search team. Marcus could really use another strong engineer and we've got a major indexing overhaul coming up in Q2."
+    },
+    {
+      "role": "user",
+      "content": "Oh, interesting. I'm totally open to that \u2014 search is actually something I've been wanting to dig into more. What does the indexing overhaul involve?"
+    },
+    {
+      "role": "assistant",
+      "content": "So right now our search index is built on a pretty old Elasticsearch setup that's been patched and extended so many times it's becoming a liability. The plan is to migrate to a new architecture \u2014 still evaluating whether we go with a managed solution or build more custom. Marcus has been doing a lot of the scoping work and you'd be coming in at a good moment to contribute to the design before we're locked in."
+    },
+    {
+      "role": "user",
+      "content": "That sounds like a really meaningful project to start on. I'm excited."
+    },
+    {
+      "role": "assistant",
+      "content": "Good. I think you'll thrive there. Alright, let me walk you through the codebase structure. Pull up your laptop and I'll share the internal docs link."
+    },
+    {
+      "role": "user",
+      "content": "One sec, okay I've got it open."
+    },
+    {
+      "role": "assistant",
+      "content": "So the main monorepo is at the link I just sent in Slack. Top level you'll see maybe a dozen service directories. The ones you care most about right now are search-service, index-pipeline, and query-router. The rest you'll encounter over time but no need to deep dive immediately."
+    },
+    {
+      "role": "user",
+      "content": "Okay, I can see those. The index-pipeline one looks pretty large already just from the directory structure."
+    },
+    {
+      "role": "assistant",
+      "content": "Yeah it is. Don't let it intimidate you \u2014 a lot of it is legacy code that we're planning to deprecate as part of the overhaul. Marcus has a good architecture doc that maps out which parts are actively maintained versus zombie code. I'll make sure you get linked to that."
+    },
+    {
+      "role": "user",
+      "content": "That would be super helpful, yeah."
+    },
+    {
+      "role": "assistant",
+      "content": "Now let's talk about process. We do two-week sprints, planning on Mondays, retro and demo on the last Friday of the sprint. Standups are async \u2014 we use Geekbot in Slack every morning at 9am. You'll get added to that today."
+    },
+    {
+      "role": "user",
+      "content": "Async standups are great, I've done that before and it works really well."
+    },
+    {
+      "role": "assistant",
+      "content": "Same. I hate meetings for the sake of meetings. We do have a weekly sync on Wednesdays that's the one meeting I'd say is non-negotiable \u2014 that's where we do actual problem solving as a team. Everything else is optional if you're heads down."
+    },
+    {
+      "role": "user",
+      "content": "Wednesday sync, got it. I'll block it on my calendar."
+    },
+    {
+      "role": "assistant",
+      "content": "Speaking of calendar \u2014 let me do a quick Slack channel tour because there are a lot of channels and you don't need to be in all of them. The essentials are: eng-general, team-search, incidents, and deploys. You can mute deploys if the volume bothers you, most people do."
+    },
+    {
+      "role": "user",
+      "content": "What about eng-random or social channels? Are those active?"
+    },
+    {
+      "role": "assistant",
+      "content": "eng-random is pretty active honestly. People share memes, interesting papers, that kind of thing. There's also a channel called lunch-spots which is exactly what it sounds like \u2014 people post recommendations and sometimes organize group lunches. Worth joining."
+    },
+    {
+      "role": "user",
+      "content": "Ha, lunch-spots is a dedicated channel? I love that."
+    },
+    {
+      "role": "assistant",
+      "content": "It's one of our most important channels, obviously. Okay on a more serious note \u2014 I need to flag something about compliance. Our security team requires all new engineers to complete the security training module in the internal learning portal by end of your first week. It takes about two hours and covers things like data handling, access policies, and phishing awareness. Don't skip it \u2014 it's actually enforced and your system access gets flagged if it's overdue."
+    },
+    {
+      "role": "user",
+      "content": "Understood. I'll make sure to get that done before Friday. Where do I find the learning portal?"
+    },
+    {
+      "role": "assistant",
+      "content": "It's linked in the new hire Confluence page that HR should have sent you. If you can't find it just ping me and I'll send the direct link. It's not the most exciting two hours of your life but some of the scenarios are actually pretty realistic."
+    },
+    {
+      "role": "user",
+      "content": "I'll track it down today and knock it out. Better to get it done early than scramble on Friday."
+    },
+    {
+      "role": "assistant",
+      "content": "Exactly. Okay, back to the codebase. Let me show you how we handle local dev setup. We've got a pretty solid dev container setup using Docker Compose \u2014 it spins up all the local dependencies automatically. The README in search-service has the steps."
+    },
+    {
+      "role": "user",
+      "content": "I already cloned the repo. Should I start running through the README now or wait until after we finish this walkthrough?"
+    },
+    {
+      "role": "assistant",
+      "content": "Let's finish the walkthrough first \u2014 there are a few gotchas in the setup that I want to flag before you hit them. Specifically, there's a known issue with the M-series Mac and one of the Redis container images. We have a workaround documented but it's easy to lose two hours debugging it if you don't know it's there."
+    },
+    {
+      "role": "user",
+      "content": "Oh, good call. I do have an M2."
+    },
+    {
+      "role": "assistant",
+      "content": "Yeah, almost everyone on the team does now. I'll send you the specific workaround doc \u2014 Marcus actually wrote it up last month after spending a day on it himself. The gist is you need to pin a specific image version and add a platform flag to the compose file."
+    },
+    {
+      "role": "user",
+      "content": "Got it, that would have definitely cost me time without knowing."
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, let's talk about your first PR. I want you to get comfortable in the codebase before doing anything big, so the initial task Marcus and I had in mind is a pretty contained change \u2014 adding some structured logging to the query-router service. It's small but it touches a lot of the patterns we use across the codebase, so it's a good learning vehicle."
+    },
+    {
+      "role": "user",
+      "content": "That sounds like a good entry point. Is there a ticket already written up for it?"
+    },
+    {
+      "role": "assistant",
+      "content": "There is \u2014 it's SEARCH-412 in Jira. I'll assign it to you today. The acceptance criteria are pretty clear but don't hesitate to ask Marcus or me if anything is ambiguous. Also, I want to pair-program with you on that first PR. I'll sit with you through the initial implementation so you get a feel for how we do code reviews and what reviewers actually look for."
+    },
+    {
+      "role": "user",
+      "content": "I really appreciate that. Pair programming is such a good way to learn the unwritten conventions."
+    },
+    {
+      "role": "assistant",
+      "content": "Totally agree. I find that reading code and actually writing it with someone are completely different learning experiences. We can set aside a few hours Thursday or Friday \u2014 whatever works better for you once you've had time to explore the codebase on your own first."
+    },
+    {
+      "role": "user",
+      "content": "Thursday works well. I'll have a couple days to read through things and come with more specific questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect. Let's pencil in Thursday afternoon then. I'll send a calendar invite."
+    },
+    {
+      "role": "user",
+      "content": "Sounds good."
+    },
+    {
+      "role": "assistant",
+      "content": "One more thing on expectations \u2014 I want to be clear that week one is really about absorbing things. No pressure to ship anything meaningful yet. But I do want you to have a real PR merged by the end of week two. Not necessarily huge, but something that's gone through review and is in main. That first merge is always a confidence milestone."
+    },
+    {
+      "role": "user",
+      "content": "End of week two for a real merged PR. That feels totally achievable with the logging ticket as the starting point."
+    },
+    {
+      "role": "assistant",
+      "content": "That's the idea. And if SEARCH-412 goes smoothly and you have energy left, Marcus has a couple of other good starter tickets he's been saving. We can talk about what makes sense when we pair on Thursday."
+    },
+    {
+      "role": "user",
+      "content": "Great. I'm also curious about the code review culture here \u2014 how thorough are reviews typically? Some places are pretty light touch."
+    },
+    {
+      "role": "assistant",
+      "content": "We're on the more thorough side, but not in a painful way. Reviewers will leave comments on style, but we try to distinguish between blocking and non-blocking feedback explicitly. If something is a blocker it'll be marked that way. Otherwise it's just a suggestion and you can take it or leave it with a quick reply."
+    },
+    {
+      "role": "user",
+      "content": "That's a healthy way to do it. I like that clarity."
+    },
+    {
+      "role": "assistant",
+      "content": "Yeah it took us a while to get there honestly. We had a period where people were just leaving vague comments and it caused a lot of anxiety about whether things were approved or not. Explicit labeling helped a ton."
+    },
+    {
+      "role": "user",
+      "content": "What's the typical turnaround time for reviews?"
+    },
+    {
+      "role": "assistant",
+      "content": "We have a soft norm of same-day for small PRs and 24 hours for larger ones. If your PR has been sitting for more than a day without a review, it's totally fine to ping people in Slack \u2014 just drop the link in team-search and ask. Nobody minds."
+    },
+    {
+      "role": "user",
+      "content": "Good to know. I always feel a little awkward doing that at a new place."
+    },
+    {
+      "role": "assistant",
+      "content": "Don't. Seriously. Waiting in silence is way worse than asking. Engineers are busy and sometimes things slip through \u2014 it's not personal, just remind people."
+    },
+    {
+      "role": "user",
+      "content": "Yeah, fair point."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, I think we've covered the big stuff. Let me recap what you've got on your plate this week so we're aligned. One: explore the monorepo, focus on search-service, index-pipeline, and query-router. Two: get your local dev environment running. Three: finish the security training by Friday. Four: pair session with me Thursday afternoon. And SEARCH-412 is your target PR to get merged by end of next week."
+    },
+    {
+      "role": "user",
+      "content": "That's a solid list. I feel like I have enough direction to actually be useful without being overwhelmed."
+    },
+    {
+      "role": "assistant",
+      "content": "That's exactly what I'm going for. My job this week is to unblock you, not overload you. My calendar is pretty open \u2014 if you get stuck on anything just Slack me directly and I'll jump on a call."
+    },
+    {
+      "role": "user",
+      "content": "I really appreciate that. One last thing \u2014 are there any engineering blog posts or internal talks I should look at to get context on how the search system evolved? Sometimes that historical context is really hard to get otherwise."
+    },
+    {
+      "role": "assistant",
+      "content": "Great question. There are two internal talks worth watching \u2014 they're recorded and linked in the team-search Confluence space. One is from about 18 months ago when we first moved off our home-grown search engine to Elasticsearch, and one is more recent about the performance issues we've been fighting. Between those two you'll have a pretty solid mental model of how we got to where we are now."
+    },
+    {
+      "role": "user",
+      "content": "I'll add those to my list. This has been really helpful \u2014 I feel way less nervous than I did walking in this morning."
+    },
+    {
+      "role": "assistant",
+      "content": "That's the goal. Honestly you asked great questions throughout and I can already tell you're going to pick things up quickly. Let's head back to the team area and I'll get you properly set up in Jira and Confluence before you start exploring the codebase."
+    },
+    {
+      "role": "user",
+      "content": "Let's do it."
+    },
+    {
+      "role": "assistant",
+      "content": "And hey \u2014 welcome to the team. Really glad to have you here. It's going to be a good quarter."
+    }
+  ]
+}
