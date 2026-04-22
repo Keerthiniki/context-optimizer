@@ -4,7 +4,7 @@
 
 Standalone context optimisation pipeline for long-running agent sessions. Reduces context window size by 44% while maintaining answer quality parity — directly addressing context rot in multi-agent workflows where tool outputs, code edits, and bash results accumulate across missions.
 
-### 🧠 1. Query Classifier (`query_classifier.py`)
+### 1. Query Classifier (`query_classifier.py`)
 **Technology:** Keyword regex with confidence scoring
 - Classifies intent as factual / analytical / procedural
 - Drives adaptive scoring weights downstream
@@ -17,7 +17,7 @@ Standalone context optimisation pipeline for long-running agent sessions. Reduce
 
 ---
 
-### 🔍 2. Landmark Detector (`landmark_detector.py`)
+### 2. Landmark Detector (`landmark_detector.py`)
 **Technology:** Rule-based pattern matching
 - Flags decisions, commitments, action items, deadlines
 - Detects tool-call chains (tool_use → tool_result pairs)
@@ -31,7 +31,7 @@ Standalone context optimisation pipeline for long-running agent sessions. Reduce
 
 ---
 
-### 📊 3. Relevance Scorer (`relevance_scorer.py`)
+### 3. Relevance Scorer (`relevance_scorer.py`)
 **Technology:** Hybrid retrieval (BM25 + semantic + recency + landmark)
 - Four complementary signals combined with adaptive weights
 - BM25-ranked retrieval over conversation history (same approach as ctx_search)
@@ -54,7 +54,7 @@ score = α·BM25 + β·semantic + γ·recency × landmark_boost
 
 ---
 
-### ⚡ 4. Selector (`message_selector.py`)
+### 4. Selector (`message_selector.py`)
 **Technology:** Priority-based selection with safety nets
 - Strict priority order: landmarks → tool chains → tail → score threshold
 - Adaptive thresholds per query type
@@ -70,7 +70,7 @@ score = α·BM25 + β·semantic + γ·recency × landmark_boost
 
 ---
 
-### 🗜️ 5. Compressor (`compressor.py`)
+### 5. Compressor (`compressor.py`)
 **Technology:** Claude Haiku with selective prompts + caching
 - Content-type-specific compression intensity
 - SHA256 content-hash caching (zero-cost repeat compressions)
@@ -91,7 +91,7 @@ score = α·BM25 + β·semantic + γ·recency × landmark_boost
 
 ---
 
-### 🔧 6. Assembler + Validator (`assembler.py`, `thread_validator.py`)
+### 6. Assembler + Validator (`assembler.py`, `thread_validator.py`)
 **Technology:** Thread reconstruction + structural checks
 - Enforces user/assistant role alternation
 - Injects [SUMMARY] markers for compressed clusters
@@ -347,7 +347,7 @@ When an agent session fails and needs resume, the optimizer preserves the full c
 
 ## Backward Compatibility
 
-✅ **Fully standalone** — no changes to existing platform required
+ **Fully standalone** — no changes to existing platform required
 - Stateless REST API — call it or don't
 - No schema changes to any database
 - No new infrastructure dependencies
