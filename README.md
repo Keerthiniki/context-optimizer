@@ -72,7 +72,7 @@ Messages with high-detail content (numbers, configs, code blocks, URLs) are auto
 ### Setup
 
 ```bash
-git clone https://github.com/yourusername/context-optimizer.git
+git clone https://github.com/Keerthiniki/context-optimizer.git
 cd context-optimizer
 
 python -m venv venv
