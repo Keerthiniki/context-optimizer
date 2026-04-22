@@ -140,7 +140,7 @@ python eval/run_eval.py --dry-run
 | Avg token reduction | **44.4%** |
 | Avg quality delta | **-0.05** (within noise) |
 | Wins / ties / losses | 9 / 21 / 10 |
-| All threads valid | ✅ |
+| All threads valid | TRUE |
 | Avg pipeline latency | 5,140ms |
 | Compression cost (40 queries) | $0.017 |
 
